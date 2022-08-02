@@ -28,9 +28,9 @@ function createPromise(position, delay) {
     }, delay);
   });
 }
-function onSucsess(position, delay) {
+function onSucsess({ position, delay }) {
   Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
 }
-function onError(position, delay) {
+function onError({ position, delay }) {
   Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
 }

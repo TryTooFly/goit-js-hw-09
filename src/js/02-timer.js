@@ -33,6 +33,7 @@ const options = {
       function countdownTime() {
         timer = setInterval(() => {
           startBtn.disabled = true;
+          dateChosen.disabled = true;
 
           const dateChoosenMs = new Date(
             dateChosen.value.replace(/-/g, '/')
@@ -51,7 +52,7 @@ const options = {
             clearInterval(timer);
             startBtn.disabled = false;
           }
-        }, 1000);
+        }, 0);
       }
 
       // addLeadingZero
